@@ -1,0 +1,75 @@
+{
+  "index_name": "website",
+  "start_urls": [
+    {
+      "url": "https://chatkitty.com/docs/rest/reference",
+      "selectors_key": "redocusaurus"
+    },
+    {
+      "url": "https://chatkitty.com/",
+      "selectors_key": "docusaurus"
+    }
+  ],
+  "sitemap_urls": [
+    "https://chatkitty.com/sitemap.xml"
+  ],
+  "sitemap_alternate_links": true,
+  "stop_urls": [],
+  "selectors": {
+    "docusaurus": {
+      "lvl0": {
+        "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+        "type": "xpath",
+        "global": true,
+        "default_value": "Documentation"
+      },
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "redocusaurus": {
+      "lvl0": {
+        "selector": "(//h1)[1]",
+        "type": "xpath"
+      },
+      "lvl1": {
+        "selector": "//div[re:match(@id, 'tag/.+')]/div/div/h1",
+        "type": "xpath"
+      },
+      "lvl2": {
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]/div/div/h2",
+        "type": "xpath"
+      },
+      "text": {
+        "selector": "//div[re:match(@id, 'tag/.+')]/div/div/p | //div[re:match(@id, 'tag/.+/operation/.+')]//span | //div[re:match(@id, 'tag/.+/operation/.+')]//p",
+        "type": "xpath"
+      }
+    }
+  },
+  "strip_chars": " .,;:#",
+  "custom_settings": {
+    "separatorsToIndex": "_",
+    "attributesForFaceting": [
+      "language",
+      "version",
+      "type",
+      "docusaurus_tag"
+    ],
+    "attributesToRetrieve": [
+      "hierarchy",
+      "content",
+      "anchor",
+      "url",
+      "url_without_anchor",
+      "type"
+    ]
+  },
+  "conversation_id": [
+    "833762294"
+  ],
+  "nb_hits": 16462
+}

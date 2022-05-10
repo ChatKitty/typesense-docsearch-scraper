@@ -26,7 +26,8 @@ class DefaultStrategy(AbstractStrategy):
 
     def select(self, path):
         """Select an element in the current DOM using specified CSS selector"""
-        return XPath(path)(self.dom) if len(path) > 0 else []
+        return XPath(path, namespaces={
+            're': 'http://exslt.org/regular-expressions'})(self.dom) if len(path) > 0 else []
 
     def get_records_from_response(self, response):
         """
