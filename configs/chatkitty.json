@@ -10,6 +10,16 @@
       "url": "https://chatkitty.com/",
       "selectors_key": "docusaurus",
       "page_rank": 2
+    },
+    {
+      "url": "https://chatkitty.com/blog",
+      "selectors_key": "docusaurus",
+      "page_rank": 3
+    },
+    {
+      "url": "https://chatkitty.com/docs",
+      "selectors_key": "docusaurus",
+      "page_rank": 4
     }
   ],
   "sitemap_urls": [
@@ -85,5 +95,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16720
+  "nb_hits": 16755
 }
