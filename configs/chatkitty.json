@@ -7,18 +7,20 @@
       "page_rank": 1
     },
     {
+      "url": "https://chatkitty.com/docs/chatkitty-js",
+      "selectors_key": "chatkitty-js",
+      "page_rank": 1
+    },
+    {
       "url": "https://chatkitty.com/",
-      "selectors_key": "docusaurus",
       "page_rank": 2
     },
     {
       "url": "https://chatkitty.com/blog",
-      "selectors_key": "docusaurus",
       "page_rank": 3
     },
     {
       "url": "https://chatkitty.com/docs",
-      "selectors_key": "docusaurus",
       "page_rank": 4
     }
   ],
@@ -28,12 +30,27 @@
   "sitemap_alternate_links": true,
   "stop_urls": [],
   "selectors": {
-    "docusaurus": {
+    "default": {
       "lvl0": {
-        "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+        "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--sublist-caret menu__link--active')]/text() | //ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
         "type": "xpath",
         "global": true,
         "default_value": "Documentation"
+      },
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "chatkitty-js": {
+      "lvl0": {
+        "selector": "(//nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+        "type": "xpath",
+        "global": true,
+        "default_value": "ChatKitty JS SDK"
       },
       "lvl1": "header h1",
       "lvl2": "article h2",
@@ -57,11 +74,15 @@
         "type": "xpath"
       },
       "lvl3": {
-        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//h3 | //div[re:match(@id, 'tag/.+/operation/.+')]/div/div/div/h5 | //div[re:match(@id, 'tag/.+/operation/.+')]/div/div/div/div/h5",
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//h3 | //div[re:match(@id, 'tag/.+/operation/.+')]/div/div/h5",
         "type": "xpath"
       },
       "lvl4": {
         "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//div/div/div//h5",
+        "type": "xpath"
+      },
+      "lvl5": {
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//td[position()=1]",
         "type": "xpath"
       },
       "text": {
@@ -91,5 +112,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16573
+  "nb_hits": 16669
 }
