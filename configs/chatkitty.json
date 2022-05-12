@@ -3,11 +3,13 @@
   "start_urls": [
     {
       "url": "https://chatkitty.com/docs/rest/reference",
-      "selectors_key": "redocusaurus"
+      "selectors_key": "redocusaurus",
+      "page_rank": 1
     },
     {
       "url": "https://chatkitty.com/",
-      "selectors_key": "docusaurus"
+      "selectors_key": "docusaurus",
+      "page_rank": 2
     }
   ],
   "sitemap_urls": [
@@ -37,15 +39,27 @@
         "type": "xpath"
       },
       "lvl1": {
-        "selector": "//div[re:match(@id, 'tag/.+')]/div/div/h1",
+        "selector": "//div[re:match(@id, 'tag/.+')]//h1",
         "type": "xpath"
       },
       "lvl2": {
-        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]/div/div/h2",
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//h2",
+        "type": "xpath"
+      },
+      "lvl3": {
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//h3 | //div[re:match(@id, 'tag/.+/operation/.+')]/div/div/div/h5 | //div[re:match(@id, 'tag/.+/operation/.+')]/div/div/div/div/h5",
+        "type": "xpath"
+      },
+      "lvl4": {
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//div/div/div/button",
+        "type": "xpath"
+      },
+      "lvl5": {
+        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//div/div/div//h5",
         "type": "xpath"
       },
       "text": {
-        "selector": "//div[re:match(@id, 'tag/.+')]/div/div/p | //div[re:match(@id, 'tag/.+/operation/.+')]//span | //div[re:match(@id, 'tag/.+/operation/.+')]//p",
+        "selector": "//div[re:match(@id, 'tag/.+')]//p | //div[re:match(@id, 'tag/.+/operation/.+')]//code | //div[re:match(@id, 'tag/.+/operation/.+')]//span | //div[re:match(@id, 'tag/.+/operation/.+')]//p",
         "type": "xpath"
       }
     }
@@ -71,5 +85,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16462
+  "nb_hits": 16720
 }
