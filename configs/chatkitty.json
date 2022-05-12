@@ -61,10 +61,6 @@
         "type": "xpath"
       },
       "lvl4": {
-        "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//div/div/div/button",
-        "type": "xpath"
-      },
-      "lvl5": {
         "selector": "//div[re:match(@id, 'tag/.+/operation/.+')]//div/div/div//h5",
         "type": "xpath"
       },
@@ -95,5 +91,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16755
+  "nb_hits": 16573
 }
