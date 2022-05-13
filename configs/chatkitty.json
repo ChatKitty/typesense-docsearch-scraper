@@ -86,7 +86,7 @@
         "type": "xpath"
       },
       "text": {
-        "selector": "//div[re:match(@id, 'tag/.+')]//p | //div[re:match(@id, 'tag/.+/operation/.+')]//code | //div[re:match(@id, 'tag/.+/operation/.+')]//span | //div[re:match(@id, 'tag/.+/operation/.+')]//p",
+        "selector": "//div[contains(@class, 'api-info')]//text() | //div[re:match(@id, 'tag/.+')]//p | //div[re:match(@id, 'tag/.+/operation/.+')]//code | //div[re:match(@id, 'tag/.+/operation/.+')]//span | //div[re:match(@id, 'tag/.+/operation/.+')]//p",
         "type": "xpath"
       }
     }
@@ -112,5 +112,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16669
+  "nb_hits": 16681
 }
