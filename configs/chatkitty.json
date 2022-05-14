@@ -27,22 +27,34 @@
   "sitemap_urls": [
     "https://chatkitty.com/sitemap.xml"
   ],
+  "concepts_urls": [
+    "https://chatkitty.com/docs/concepts"
+  ],
   "sitemap_alternate_links": true,
   "stop_urls": [],
   "selectors": {
     "default": {
       "lvl0": {
-        "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--sublist-caret menu__link--active')]/text() | //ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+        "selector": "(//ul[contains(@class,'breadcrumbs')]/li[meta[contains(@itemprop, 'position') and contains(@content, '1')]]//text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
         "type": "xpath",
         "global": true,
         "default_value": "Documentation"
       },
-      "lvl1": "header h1",
+      "lvl1": "article h1",
       "lvl2": "article h2",
       "lvl3": "article h3",
       "lvl4": "article h4",
       "lvl5": "article h5, article td:first-child",
       "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "concepts": {
+      "lvl0": "article h1",
+      "lvl1": "article h2",
+      "lvl2": "article h3",
+      "lvl3": "article h4",
+      "lvl4": "article h5, article td:first-child",
+      "lvl5": "article h6",
       "text": "article p, article li, article td:last-child"
     },
     "chatkitty-js": {
@@ -112,5 +124,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16681
+  "nb_hits": 16306
 }

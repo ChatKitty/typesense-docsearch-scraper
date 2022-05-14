@@ -10,6 +10,7 @@ from distutils.util import strtobool
 import json
 import os
 import copy
+import re
 
 from .config_validator import ConfigValidator
 from .nb_hits_updater import NbHitsUpdater
@@ -40,6 +41,7 @@ class ConfigLoader:
     selectors = None
     selectors_exclude = []
     start_urls = []
+    concepts_urls = []
     stop_urls = []
     stop_content = []
     strategy = 'default'
@@ -121,6 +123,11 @@ class ConfigLoader:
         self.min_indexed_level = SelectorsParser().parse_min_indexed_level(
             self.min_indexed_level)
         self.start_urls = UrlsParser.parse(self.start_urls)
+        self.concepts_urls = list(map(lambda url: {
+            'url': url,
+            'compiled_url': re.compile(url),
+            'selectors_key': 'concepts'
+        }, self.concepts_urls))
 
         # Build default allowed_domains from start_urls and stop_urls
         if self.allowed_domains is None:

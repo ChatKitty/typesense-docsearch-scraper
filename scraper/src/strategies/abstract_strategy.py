@@ -53,10 +53,15 @@ class AbstractStrategy:
         selectors_key = 'default'
 
         if url is not None:
+            for concepts_url in self.config.concepts_urls:
+                if re.search(concepts_url['compiled_url'], url) is not None:
+                    selectors_key = concepts_url['selectors_key']
+                    return selectors_key
+
             for start_url in self.config.start_urls:
                 if re.search(start_url['compiled_url'], url) is not None:
                     selectors_key = start_url['selectors_key']
-                    break
+                    return selectors_key
 
         return selectors_key
 
