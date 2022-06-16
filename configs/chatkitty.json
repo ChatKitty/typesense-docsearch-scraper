@@ -12,6 +12,11 @@
       "page_rank": 1
     },
     {
+      "url": "https://chatkitty.com/docs/chatkitty-react-native",
+      "selectors_key": "chatkitty-react-native",
+      "page_rank": 1
+    },
+    {
       "url": "https://chatkitty.com/",
       "page_rank": 2
     },
@@ -63,6 +68,21 @@
         "type": "xpath",
         "global": true,
         "default_value": "ChatKitty JS SDK"
+      },
+      "lvl1": "header h1",
+      "lvl2": "article h2",
+      "lvl3": "article h3",
+      "lvl4": "article h4",
+      "lvl5": "article h5, article td:first-child",
+      "lvl6": "article h6",
+      "text": "article p, article li, article td:last-child"
+    },
+    "chatkitty-react-native": {
+      "lvl0": {
+        "selector": "(//nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
+        "type": "xpath",
+        "global": true,
+        "default_value": "ChatKitty React Native"
       },
       "lvl1": "header h1",
       "lvl2": "article h2",
@@ -124,5 +144,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 16306
+  "nb_hits": 30417
 }
