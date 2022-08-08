@@ -7,8 +7,8 @@
       "page_rank": 1
     },
     {
-      "url": "https://chatkitty.com/docs/chatkitty-js",
-      "selectors_key": "chatkitty-js",
+      "url": "https://chatkitty.com/docs/chatkitty-js-core",
+      "selectors_key": "chatkitty-js-core",
       "page_rank": 1
     },
     {
@@ -62,7 +62,7 @@
       "lvl5": "article h6",
       "text": "article p, article li, article td:last-child"
     },
-    "chatkitty-js": {
+    "chatkitty-js-core": {
       "lvl0": {
         "selector": "(//nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
         "type": "xpath",
