@@ -2,7 +2,7 @@
   "index_name": "website",
   "start_urls": [
     {
-      "url": "https://chatkitty.com/docs/rest/reference",
+      "url": "https://chatkitty.com/docs/api/reference",
       "selectors_key": "redocusaurus",
       "page_rank": 1
     },
@@ -144,5 +144,5 @@
   "conversation_id": [
     "833762294"
   ],
-  "nb_hits": 30417
+  "nb_hits": 30657
 }
