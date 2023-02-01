@@ -1,26 +1,34 @@
-# DocSearch scraper
+# Typesense DocSearch scraper
 
-## DEPRECATED
+This is a fork of Algolia's awesome [DocSearch Scraper](https://github.com/algolia/docsearch-scraper), customized to index data in [Typesense](https://typesense.org). 
 
-This repository is not maintained anymore in favor of [our new infrastructure](https://docsearch.algolia.com/docs/migrating-from-legacy).
+You'd typically setup this scraper to run on your documentation site, and then use [typesense-docsearch.js](https://github.com/typesense/typesense-docsearch.js) to add a search bar to your site. 
 
-You can still use the [run your own](https://docsearch.algolia.com/docs/legacy/run-your-own) solution, but we won't provide any feature to the DocSearch Scraper.
+#### What is Typesense? 
 
-# Summary
+If you're new to Typesense, it is an **open source** search engine that is simple to use, run and scale, with clean APIs and documentation. 
 
-If you're looking for a way to add DocSearch to your site, the easiest solution
-is to [apply to DocSearch](https://docsearch.algolia.com/apply). To run the scraper yourself, you're at the right
-place.
+Think of it as an open source alternative to Algolia and an easier-to-use, batteries-included alternative to ElasticSearch. Get a quick overview from [this guide](https://typesense.org/guide/).
 
-## Installation and Usage
+## Usage
 
-Please check the [dedicated documentation](https://docsearch.algolia.com/docs/legacy/run-your-own/) to see how you can install and
-run DocSearch yourself.
+Read detailed step-by-step instructions on how to configure and setup the scraper on Typesense's dedicated documentation site: https://typesense.org/docs/latest/guide/docsearch.html
 
-This project supports Python 3.6+
+## Development Workflow
 
-## Useful links
+This section only applies if you're making changes to this scraper itself. If you only need to run the scraper, see Usage instructions above.
 
-- [Documentation](https://docsearch.algolia.com/)
-- [Documentation source code](https://github.com/algolia/docsearch/tree/next/packages/website)
-- [DocSearch UI](https://github.com/algolia/docsearch)
+#### Releasing a new version
+
+```shellsession
+$ pipenv shell
+$ ./docsearch docker:build
+$ git tag -a 0.2.1 -m "0.2.1"
+$ ./docsearch deploy:scraper
+$ git push --follow-tags
+
+```
+
+## Help
+
+If you have any questions or run into any problems, please create a Github issue and we'll try our best to help.
