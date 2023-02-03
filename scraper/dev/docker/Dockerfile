@@ -1,5 +1,5 @@
 FROM typesense/docsearch-scraper-base
-LABEL maintainer="contact@typesense.org"
+LABEL maintainer="development@chatkitty.com"
 
 WORKDIR /root
 COPY scraper/src ./src
